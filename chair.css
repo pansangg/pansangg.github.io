@@ -1,0 +1,10 @@
+.chair {
+    font-size: 100px;
+    cursor: pointer;
+    transition: transform 0.2s;
+    user-select: none;
+}
+
+.chair:hover {
+    transform: scale(1.2);
+}

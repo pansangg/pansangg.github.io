@@ -315,6 +315,7 @@ p {
     image-rendering: pixelated;
     margin-top: 50px;
     max-width: 600px;
+    position: relative;
     z-index: 1;
 }
 

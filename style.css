@@ -18,6 +18,12 @@ body {
     padding: 50px 0;
 }
 
+.code {
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #1e1e1e;
+}
+
 .bgCircle {
     border-radius: 100%;
     width: 20vh;

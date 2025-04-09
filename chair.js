@@ -13,7 +13,9 @@ chair.addEventListener('click', () => {
             alert("поздравляю ты прошёл кликер")
         } else {
             localStorage.setItem("chairclicker", Number(completed)+1);
-            if (completed == 2) {
+            if (completed == 1) {
+                alert("поздравляю ты прошёл кликер")
+            } else if (completed == 2) {
                 alert("поздравляю ты прошёл кликер")
             } else if (completed == 3) {
                 alert("уже третий раз прошёл кликер молодец")
@@ -43,12 +45,11 @@ chair.addEventListener('click', () => {
 
         if (Math.random() < 0.9) {
             flyingChair.innerHTML = '🪑'
-        } else {
+        } else { // 10%
             if (Math.random() < 0.99) {
-                flyingChair.innerHTML = '💺'
-            } else {
-                flyingChair.innerHTML = '🪙'
-            }
+                if (Math.random() < 0.7) {flyingChair.innerHTML = '🚽'}
+                else {flyingChair.innerHTML = '💩'}
+            } else {flyingChair.innerHTML = '🪙 <---'}
         }
 
         flyingChair.style.position = 'fixed';
@@ -62,7 +63,8 @@ chair.addEventListener('click', () => {
         setTimeout(() => {
             flyingChair.style.opacity = '0.5';
             flyingChair.style.top = '0px';
-            flyingChair.style.transform = `rotate(${Math.random() * 360}deg)`;
+            if (flyingChair.innerHTML == '🪙 &lt;---') {flyingChair.style.transform = 'rotate(720deg)';}
+            else {flyingChair.style.transform = `rotate(${Math.random() * 360}deg)`;}
         }, 25);
 
         // Удаляем после анимации

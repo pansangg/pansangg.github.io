@@ -18,11 +18,4 @@ document.addEventListener('DOMContentLoaded', function() {
     dash.addEventListener('mouseout', () => {
         navbar.style.boxShadow = '0px 0px 5px #ffffff';
     });
-
-    const ens = document.querySelector('.emptynotsecret');
-    const es = document.querySelector('.emptysecret');
-
-    ens.addEventListener('mouseover', () => {
-        es.style.opacity = '1';
-    });
 })

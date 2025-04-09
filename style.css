@@ -194,7 +194,10 @@ body {
 
 /* сверху стиль для фона, снизу остальное */
 
-.modal h1,
+.modal h1 {
+    text-align: center;
+    text-shadow: #ffffff80 0 0 25px;
+}
 .modal p {
     text-shadow: #ffffff80 0 0 25px;
 }
@@ -222,9 +225,9 @@ p {
 }
 
 .modal {
-    width: 600px;
+    width: fit-content;
+    max-width: 600px;
     height: max-content;
-    text-align: center;
     z-index: 1;
     border: 1.6px solid #ffffff7f;
     background: #ffffff24;

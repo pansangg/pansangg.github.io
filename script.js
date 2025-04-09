@@ -1,12 +1,9 @@
 (async () => {
     if (typeof jQuery === 'undefined') {
-      console.log("xep2");
       await import('https://cdn.jsdelivr.net/jquery/latest/jquery.min.js');
-      console.log("jQuery загружен");
     }
 
     $(document).ready(function() {
-      console.log("xep");
       $('#buttons').load('buttons.html');
     });
   })();

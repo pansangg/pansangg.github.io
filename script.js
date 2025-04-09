@@ -11,6 +11,12 @@
 document.addEventListener('DOMContentLoaded', function() {
     const dash = document.querySelector('.dash');
     const navbar = document.querySelector('.navbar');
+    const ens = document.querySelector('.emptynotsecret');
+    const es = document.querySelector('.emptysecret');
+
+    ens.addEventListener('mouseover', () => {
+        es.style.opacity = '1';
+    });
 
     dash.addEventListener('mouseover', () => {
         navbar.style.boxShadow = '0px 0px 20px #ffffff';

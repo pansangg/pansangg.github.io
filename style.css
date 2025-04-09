@@ -371,3 +371,10 @@ p {
     border: 2px solid #ddd;
     transition: all 0.3s;
 }
+
+.emptynotsecret {text-align: center;}
+
+.emptysecret {
+    opacity: 0;
+    transition: all 0.5 ease;
+}

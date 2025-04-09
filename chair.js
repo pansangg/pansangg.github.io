@@ -5,7 +5,7 @@ let clicks = 0;
 chair.addEventListener('click', () => {
     clicks++;
 
-    if (clicks == 3) {
+    if (clicks == 151) {
         const completed = localStorage.getItem('chairclicker');
         console.log(completed)
         if (!completed) {

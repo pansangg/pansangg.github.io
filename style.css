@@ -5,6 +5,7 @@
 }
 
 body {
+    animation: load 0.7s forwards;
     font-family: "JetBrains Mono", monospace;
     display: flex;
     justify-content: start;
@@ -16,6 +17,15 @@ body {
     background-color: #000;
     gap: 0px;
     padding: 50px 0;
+}
+
+@keyframes load {
+    0% {
+        filter: brightness();
+    }
+    100% {
+        filter: blur(0);
+    }
 }
 
 .code {
@@ -374,9 +384,26 @@ p {
     transition: all 0.3s;
 }
 
-.emptynotsecret {text-align: center;}
+.knopki {
+    font-family: "JetBrains Mono", monospace;
+    color: #fff;
+    background: #00000000;
+    padding: 7.5px 15px;
+    margin-top: 10px;
+    font-size: 15px;
+    font-weight: 800;
+    border: 2px solid #fff;
+    border-radius: 20px;
+    transition: all 0.3s;
+    width: 100%;
+}
 
-.emptysecret {
-    opacity: 0;
-    transition: all 0.5 ease;
+.knopki:hover {
+    color: #000000;
+    background: #fff;
+    padding: 7.5px 15px;
+    border: 2px solid #fff;
+    border-radius: 20px;
+    box-shadow: 0 0 20px #fff;
+    cursor: pointer;
 }

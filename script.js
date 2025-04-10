@@ -6,6 +6,7 @@
     $(document).ready(function() {
       $('#buttons').load('buttons.html');
       $('#webring').load('webring.html');
+      $('#musles').load('musles.html');
     });
   })();
 

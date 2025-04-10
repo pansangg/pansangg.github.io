@@ -407,3 +407,65 @@ p {
     box-shadow: 0 0 20px #fff;
     cursor: pointer;
 }
+
+.webrbtn {
+    font-family: "JetBrains Mono", monospace;
+    color: #fff;
+    background: #00000000;
+    padding: 7.5px 15px;
+    margin-top: 10px;
+    font-size: 15px;
+    font-weight: 800;
+    border: 2px solid #fff;
+    border-radius: 20px;
+    transition: all 0.3s;
+    width: fit-content;
+}
+
+.webrbtn:hover {
+    color: #000000;
+    background: #fff;
+    padding: 7.5px 15px;
+    border: 2px solid #fff;
+    border-radius: 20px;
+    box-shadow: 0 0 20px #fff;
+    cursor: pointer;
+}
+
+.webr {
+    width: fit-content;
+    height: 60px;
+    display: inline-block;
+    z-index: 1;
+    border: 1.6px solid #ffffff7f;
+    background: #ffffff24;
+    backdrop-filter: blur(10px);
+    padding: 21px 26px;
+    border-radius: 35px;
+    padding: 0 16px;
+    margin-top: 50px;
+    box-shadow: 0px 0px 5px 1px #ffffff inset;
+    transition: all 0.2s ease;
+}
+
+.hl {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+.hld {
+    color: inherit;
+    cursor: pointer;
+}
+
+.cntct {
+    color: #f1e454;
+    text-shadow: #f1e454 0 0 25px;
+}
+
+.togglebtn {
+    position: absolute;
+    top: 0;
+    right: 0;
+}

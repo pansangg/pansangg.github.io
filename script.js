@@ -86,6 +86,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 1800);
 
         let boomSound = new Audio('audio/boom.mp3');
+        boomSound.preload = "auto";
         boomSound.play();
     }
 
@@ -101,6 +102,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     let meowaudio = new Audio('audio/meowmeow.mp3');
+    meowaudio.preload = "auto";
     const meowmeow = document.getElementById("meowmeow")
     meowmeow.addEventListener('click', () => {
       if (!meowaudio.paused) {
@@ -110,9 +112,18 @@ document.addEventListener('DOMContentLoaded', function() {
       meowaudio.play();
     });
 
+    let preload1 = new Audio("audio/hit1.mp3");
+    let preload2 = new Audio("audio/hit2.mp3");
+    let preload3 = new Audio("audio/hit3.mp3");
+    let preload4 = new Audio("audio/hit4.mp3");
+    preload1.preload = "auto";
+    preload2.preload = "auto";
+    preload3.preload = "auto";
+    preload4.preload = "auto";
     const avatar = document.querySelector(".avatar")
     avatar.addEventListener('click', () => {
       let avataraudio = new Audio();
+      avataraudio.preload = "auto";
       avataraudio.src = "audio/hit"+randInt(1,4)+".mp3";
       avataraudio.volume = 0.5;
       avataraudio.play();

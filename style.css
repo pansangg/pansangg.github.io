@@ -651,3 +651,12 @@ p {
 .last-update {
     font-style: italic;
 }
+
+.zapret1 {
+    transition: all 0.3s ease;
+    image-rendering: pixelated;
+}
+
+.zapret1:hover {
+    transform: scale(1.5);
+}

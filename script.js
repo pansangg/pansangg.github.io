@@ -29,7 +29,6 @@ const splashes = [
     "also try amirtini.github.io",
     "also try camp3rcraft.github.io",
     "инт мейн говнюк",
-    "деф говнюк",
     "дайте мне денег",
     "что тут писать?",
     "best viewed on PC",

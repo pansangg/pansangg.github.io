@@ -578,10 +578,6 @@ p {
     left: 800px;
 }
 
-.rainbow-splash:hover {
-    cursor: help;
-}
-
 @keyframes rainbow-flow {
     0% {
         text-shadow: #000 2px 2px 0px, #ff0000 0 0 10px;

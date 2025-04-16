@@ -89,9 +89,9 @@ document.addEventListener('DOMContentLoaded', function() {
         boomSound.play();
     }
 
-
     const dash = document.querySelector('.dash');
     const navbar = document.querySelector('.navbar');
+
     dash.addEventListener('mouseover', () => {
         navbar.style.boxShadow = '0px 0px 20px #ffffff';
     });
@@ -113,7 +113,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const avatar = document.querySelector(".avatar")
     avatar.addEventListener('click', () => {
       let avataraudio = new Audio();
-      avataraudio.src = "audio/hit"+randInt(2,7)+".mp3";
+      avataraudio.src = "audio/hit"+randInt(1,4)+".mp3";
       avataraudio.volume = 0.5;
       avataraudio.play();
     });
@@ -131,7 +131,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let avatarClickCount = 0;
 
     // снизу частицы для аватара
-    const emojis = ['💥', '🔥', '💨', '🚽', '☠️', '♥️', '👽', '🧠', '🪑', '🪙', '🍗', '🏀', '🎱', '🍋', '🥥', '🍕'];
+    const emojis = ['💥', '🔥', '💨', '🚽', '☠️', '♥️', '🧠', '🪑', '🪙', '🍗', '🏀', '🎱', '🍋', '🥥', '🍕'];
     const clickable = document.querySelector(".avatar")
     clickable.addEventListener('click', (event) => {
       if (avatarClickCount > 90) {
@@ -204,4 +204,24 @@ document.addEventListener('DOMContentLoaded', function() {
       }
       requestAnimationFrame(animate);
     }
+
+    let lastUpdate = "";
+    fetch('https://api.github.com/repos/pansangg/pansangg.github.io')
+      .then(response => response.json())
+      .then(data => {
+        const lastUpdateText = document.querySelector(".last-update");
+
+        const rawLastUpdateDate = new Date(data.pushed_at);
+        const formattedDate = rawLastUpdateDate.toLocaleDateString('ru-RU', {
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric',
+          hour: 'numeric',
+          minute: 'numeric',
+          second: 'numeric'
+        });
+        console.log(formattedDate)
+        lastUpdate = "последнее обновление сайта:<br>"+formattedDate
+        lastUpdateText.innerHTML = lastUpdate;
+    })
 });

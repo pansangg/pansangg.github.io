@@ -647,3 +647,7 @@ p {
 .hiddengif {
     display: none;
 }
+
+.last-update {
+    font-style: italic;
+}

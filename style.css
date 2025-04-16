@@ -526,6 +526,7 @@ p {
 }
 
 #meowmeow {
+    user-select: none;
     width: 150px;
     height: 150px;
     box-shadow: #ffffff80 0 0 25px;

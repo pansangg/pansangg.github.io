@@ -64,7 +64,9 @@ const splashes = [
     "tralalero tralala",
     "🍐бом бом",
     "айфон 5 ASS",
-    "черрипiк черепоik💀☠️"
+    "черрипiк черепоik💀☠️",
+    "reacted to your message 🦄",
+    "🛐💨💨💨💨💨💥"
 ];
 
 document.addEventListener('DOMContentLoaded', function() {

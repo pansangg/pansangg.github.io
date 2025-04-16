@@ -554,10 +554,10 @@ p {
     top: 10px;
     z-index: 10000;
     animation: splash 2s infinite;
-    transform: translate(100px, 50px);
+    transform: translate(0, 0);
     position: absolute;
     top: 10%;
-    left: 45vw;
+    left: 50vw;
 }
 
 @keyframes splash {

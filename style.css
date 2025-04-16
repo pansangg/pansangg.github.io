@@ -5,6 +5,11 @@
 }
 
 body {
+    /* filter: blur(15px);
+    pointer-events: none;
+    user-select: none;
+    transition: all 0.3s ease; */
+
     overflow-x: hidden;
     font-family: "JetBrains Mono", monospace;
     display: flex;
@@ -17,6 +22,12 @@ body {
     background-color: #000;
     gap: 0px;
 }
+
+/* body.loaded {
+    filter: none;
+    pointer-events: auto;
+    user-select: auto;
+} */
 
 @keyframes load {
     0% {
@@ -562,7 +573,7 @@ p {
     font-size: 30px;
     top: 10px;
     z-index: 10000;
-    animation: splash 2s infinite, rainbow-flow 3s linear infinite;
+    animation: splash 2s infinite, rainbow-flow 2s linear infinite;
     transform: translate(100px, 50px);
     position: absolute;
     top: 100px;
@@ -602,4 +613,43 @@ p {
         text-shadow: #000 2px 2px 0px, #ff0000 0 0 10px;
         color: #ff0000;
     }
+}
+
+.loadanim {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    z-index: 9999;
+    transition: opacity 0.5s ease;
+}
+
+.particle {
+    position: fixed;
+    pointer-events: none;
+    font-size: 24px;
+    will-change: transform, opacity;
+    user-select: none;
+    z-index: 1000;
+    transition: all 0.3s;
+}
+
+.boomgif {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: 99999;
+}
+
+.hiddengif {
+    display: none;
 }

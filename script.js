@@ -28,7 +28,7 @@ function isMobile() {
 }
 
 const splashes = [
-    "also try meex.lol",
+    "тут ничего не было",
     "post this мяу-мяу every week",
     "виво х200 про в соло",
     "Я ХЛЕБ РОВНО ОТРЕЗАЛ",

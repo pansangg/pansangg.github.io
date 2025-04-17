@@ -20,6 +20,13 @@ function randInt(min, max) {
 //     return size * scale;
 // }
 
+function isMobile() {
+  if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+    return true;
+  }
+  return false;
+}
+
 const splashes = [
     "also try meex.lol",
     "post this мяу-мяу every week",
@@ -163,6 +170,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // снизу частицы для аватара
     const emojis = ['💥', '🔥', '💨', '🚽', '☠️', '♥️', '🧠', '🪑', '🪙', '🍗', '🏀', '🍋', '🥥', '🍕', '🍎', '🎺', '🔔', '🌶️', '🍫', '🍌', '🚗', '💅', '🎩', '✅', '👆', '✨', '🧨', '💎', '🎮', '🎲', '🔒', '🪓', '🔪', '💸', '📌', '🍔', '🥨', '🍭', '🍺', '🍒', '🥑', '⚓', '💢', '☂️', '🌡️', '🧻'];
     const clickable = document.querySelector(".avatar")
+    const viewportHeight = window.innerHeight;
     clickable.addEventListener('click', (event) => {
       if (avatarClickCount > 90) {
         avatar.src = "img/angry_avatar.png";
@@ -183,6 +191,10 @@ document.addEventListener('DOMContentLoaded', function() {
       particle.classList.add('particle');
       particle.textContent = emojis[Math.floor(Math.random() * emojis.length)];
 
+      if (isMobile()) {
+        x *= 2;
+        y *= 2;
+      }
       // начальная позиция частицы
       particle.style.left = x + 'px';
       particle.style.top = y + 'px';
@@ -226,13 +238,30 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Плавное уменьшение прозрачности
         const opacity = 1 - elapsed / (duration / 1000);
-
+        const rect = particle.getBoundingClientRect();
         particle.style.transform = `translate(${dx}px, ${dy}px) rotate(${rotation}deg)`;
         particle.style.opacity = opacity;
 
+        console.log(rect.top, viewportHeight-1)
+
+        if (rect.top > viewportHeight) {
+          console.log("bom bom")
+          particle.style.display = 'none';
+        } else {
+          particle.style.display = '';
+          console.log("ponnn")
+          requestAnimationFrame(animate);
+        }
+      }
+      const rect = particle.getBoundingClientRect();
+      if (rect.top > viewportHeight-1) {
+        console.log("bom bom")
+        particle.style.display = 'none';
+      } else {
+        particle.style.display = '';
+        console.log("ponnn2")
         requestAnimationFrame(animate);
       }
-      requestAnimationFrame(animate);
     }
 
     let lastUpdate = "";

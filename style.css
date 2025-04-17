@@ -28,27 +28,37 @@ body {
 }
 
 @media only screen and (max-width: 768px) {
-    .bgCircle {
-        animation: none !important;
-        -webkit-animation: none !important;
-        transition: none !important;
-        transform: none !important;
-    }
     body:not(.bgCircle):not(.particle) {
+        /* position: fixed; */
         overflow-x: hidden; /* запрет горизонтального скролла */
-        overflow-y: auto;
+        overflow-y: scroll;
         transform: scale(0.5);
         transform-origin: top left;
         width: 200%;
+        scrollbar-width: none; /* Для Firefox */
+        -ms-overflow-style: none; /* Для IE и Edge */
+    }
+    body::-webkit-scrollbar {
+        display: none;
     }
     .boomgif {
-        transform: scale(1);
+        transform: scale(4);
     }
     .splash {
         display: none;
     }
     .rainbow-splash {
         display: none;
+    }
+    .bgCircle {
+        animation: none !important;
+        -webkit-animation: none !important;
+        transition: none !important;
+        transform: none !important;
+        display: none !important;
+    }
+    .particle {
+        position: fixed;
     }
 }
 
@@ -280,8 +290,8 @@ p {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
+    width: 200vw;
+    height: 200vh;
     z-index: 0;
     background: radial-gradient(#00593e, #000);
     filter: blur(100px);

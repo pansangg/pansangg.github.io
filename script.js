@@ -14,6 +14,12 @@ function randInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
+// function adjustedSize(size) {
+//     const scale = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--global-scale'));
+//     console.log(scale)
+//     return size * scale;
+// }
+
 const splashes = [
     "also try meex.lol",
     "post this мяу-мяу every week",
@@ -77,7 +83,11 @@ const splashes = [
     "захар крамбл куки",
     "крамбл куки захар",
     "захар ждёт кокос",
-    "клянись"
+    "клянись",
+    "made on windows",
+    "made on pc",
+    "made on earth",
+    "made in russia"
 ];
 
 document.addEventListener('DOMContentLoaded', function() {

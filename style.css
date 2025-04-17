@@ -23,6 +23,35 @@ body {
     gap: 0px;
 }
 
+:root {
+    --global-scale: 1;
+}
+
+@media only screen and (max-width: 768px) {
+    .bgCircle {
+        animation: none !important;
+        -webkit-animation: none !important;
+        transition: none !important;
+        transform: none !important;
+    }
+    body:not(.bgCircle):not(.particle) {
+        overflow-x: hidden; /* запрет горизонтального скролла */
+        overflow-y: auto;
+        transform: scale(0.5);
+        transform-origin: top left;
+        width: 200%;
+    }
+    .boomgif {
+        transform: scale(1);
+    }
+    .splash {
+        display: none;
+    }
+    .rainbow-splash {
+        display: none;
+    }
+}
+
 /* body.loaded {
     filter: none;
     pointer-events: auto;

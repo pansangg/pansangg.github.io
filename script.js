@@ -28,7 +28,7 @@ function isMobile() {
 }
 
 const splashes = [
-    "тут ничего не было",
+    "dont try meex.lol at all cost",
     "post this мяу-мяу every week",
     "виво х200 про в соло",
     "Я ХЛЕБ РОВНО ОТРЕЗАЛ",
@@ -39,7 +39,7 @@ const splashes = [
     "завтра в 3",
     "пахан когда разбан на кубере",
     "удалите компьютер",
-    "dont try amirtini.github.io",
+    "maybe try amirtini.github.io",
     "also try camp3rcraft.github.io",
     "инт мейн говнюк",
     "дайте мне денег",

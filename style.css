@@ -701,3 +701,30 @@ p {
 .zapret1:hover {
     transform: scale(1.5);
 }
+
+.dcl-what-text {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    background-color: #000;
+    padding: 3px;
+    border-radius: 5px;
+    z-index: 10000;
+    top: 10px;
+    left: 500px;
+    width: 50%;
+    position: absolute;
+}
+
+.dcl-what-qm {
+    font-size: 25px;
+}
+
+.dcl-what-qm:hover {
+    cursor: pointer;
+}
+
+.dcl-what-qm:hover .dcl-what-text {
+    visibility: visible;
+    opacity: 1;
+}

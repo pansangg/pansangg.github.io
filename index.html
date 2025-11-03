@@ -6,21 +6,7 @@
   <title>перенаправление…</title>
   <script>
         // Функция для проверки страны по IP
-        fetch('https://ipapi.co/json/')
-        .then(res => res.json())
-        .then(data => {
-            if (data.country === "UA") {
-                // Если Украина → редирект на proxied домен
-                window.location.href = "https://proxied.pansangg.su";
-            } else {
-                // Все остальные → основной домен
-                window.location.href = "https://pansangg.su";
-            }
-        })
-        .catch(() => {
-            // Если ошибка при определении IP — по умолчанию основной домен
-            window.location.href = "https://pansangg.su";
-        });
+
     </script>
 </head>
 <body>
